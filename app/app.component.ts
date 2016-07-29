@@ -2,6 +2,7 @@ import { Component }         from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { HeroService }       from './hero.service';
+import { DashboardComponent } from './dashboard.component';
 
 @Component({
   selector: 'my-app',
@@ -17,7 +18,8 @@ import { HeroService }       from './hero.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     HeroService
-  ]
+  ],
+  precompile: [DashboardComponent]
 })
 
 export class AppComponent {
